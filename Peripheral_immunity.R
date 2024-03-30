@@ -1094,18 +1094,11 @@ for (i in name_a) {
 coeff.2 <- coeff.old
 coeff.2
 
-apoe4_20210906 <- read.csv("D:/Dr.Yu/UKB/Sleep-dementia/data/leinao/apoe4_20210906.csv", sep="")
-colnames(apoe4_20210906)[1] <- "eid"
-aa1<-subset(apoe4_20210906,apoe4_20210906$eid>0)
-aaa1<-merge(a,aa1,by="eid",all = TRUE)
-aaaa1<-subset(aaa1, aaa1$eid %in% a$eid)
-a<-aaaa1
-a_noe2e4<-subset(a,!a$apoe=="e2_e4")
-
 ####_____subgroup_APOE####
 a_none_APOE4<-subset(a,a$APOE4==0)
 a_one_APOE4<-subset(a,a$APOE4==1 & a$apoe == "e3_e4")
 a_two_APOE4<-subset(a,a$APOE4==2)
+
 
 #none_APOE4
 #adjusted for Age+Sex+ApoE4+education
